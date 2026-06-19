@@ -1,6 +1,10 @@
 async function callBackend() {
     try {
-        const response = await fetch("http://localhost:8080/api/hello");
+        const response = await fetch("http://localhost:8080/api/hello", {
+            headers: {
+                Authorization: "Bearer " + token
+            }
+        });
         const text = await response.text();
 
         document.getElementById("result").innerText = text;
