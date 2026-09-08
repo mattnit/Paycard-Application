@@ -15,11 +15,6 @@ public class HelloController {
         return "Hello from Spring Boot REST API";
     }
 
-    @GetMapping("/user")
-    public User getUser() {
-        return new User(1, "Matthew");
-    }
-
     @GetMapping("/api/hello")
     public String APIhello() {
         return "Hello from Java backend!";
